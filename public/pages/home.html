@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>home page</title>
+	</head>
+
+	<body class="text-left">
+		<h1>Home page</h1>
+		<button
+			class="px-3 btn btn-sm btn-success mb-3"
+			data-toggle="modal"
+			data-target="#thread-modal"
+		>
+			new thread
+		</button>
+
+		<!-- table template -->
+		
+		<!-- thread reply modal -->
+		<div
+			class="modal fade"
+			id="thread-reply-modal"
+			data-backdrop="static"
+			data-keyboard="false"
+			tabindex="-1"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">
+							Reply to thread
+						</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body text-left">
+						<form id="thread-form" method="post" name="threadForm">
+							<div class="form-group">
+								<label for="content">Thread content</label>
+								<textarea
+									class="form-control"
+									name="content"
+									id="content"
+									rows="3"
+									required
+								>
+								</textarea>
+							</div>
+							<div>
+								<button
+									type="submit"
+									class="px-3 btn btn-primary btn-sm"
+								>
+									create thread
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
