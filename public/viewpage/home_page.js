@@ -69,11 +69,10 @@ export async function home_page() {
     }
     buildHomePage(threadList, true)
 
-    // Implementing delete button
+    //Here, we implement the  delete functionality
     if (document.getElementById('button-delete-thread') != null) {
     document.getElementById('button-delete-thread').addEventListener('click', async => {
         const threadId = document.getElementById('delete-threadId').value
-        //console.log(threadId)
         const button = document.getElementById('button-delete-thread')
         const label = Util.disableButton(button)
         try {
@@ -91,7 +90,7 @@ export async function home_page() {
 }
 
 export function buildHomePage(threadList, newButton) {
-
+//Here, we implement the page display information
     let html =''
     if (newButton) {
     html = `
